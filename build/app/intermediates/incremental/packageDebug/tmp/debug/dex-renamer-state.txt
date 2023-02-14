@@ -1,0 +1,4 @@
+#Tue Feb 14 21:04:51 PKT 2023
+base.0=F\:\\Mobile App Dev Journey\\flutter\\projects\\bmi_calculator\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
