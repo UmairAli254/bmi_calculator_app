@@ -112,9 +112,13 @@ class MyAppState extends State<MyApp> {
                                   weight = wController.text;
                                   height = hController.text;
 
-                                  if (height.contains(".")) {
+                                  if (weight.contains(".")) {
+                                    weight = double.parse(weight);
+                                  } else {
                                     weight = int.parse(weight);
+                                  }
 
+                                  if (height.contains(".")) {
                                     var ls = height.split(".");
                                     var strToNm =
                                         ls.map((str) => int.parse(str));
@@ -132,7 +136,7 @@ class MyAppState extends State<MyApp> {
 
                                     print(bmi);
                                   } else {
-                                    weight = int.parse(weight);
+                                    // weight = int.parse(weight);
                                     height = int.parse(height);
 
                                     // Convert feet to meter
@@ -147,9 +151,8 @@ class MyAppState extends State<MyApp> {
                                     bgColor = Colors.orange.shade100;
                                   } else if (bmi > 30) {
                                     bmiMsg = "Obesity";
-                                   bgColor = Colors.orange.shade100;
-                                  }
-                                  else if (bmi < 18.5) {
+                                    bgColor = Colors.orange.shade100;
+                                  } else if (bmi < 18.5) {
                                     bmiMsg = "You are Underweight";
                                     bgColor = Colors.red.shade100;
                                   } else {
